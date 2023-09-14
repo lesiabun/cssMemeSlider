@@ -1,0 +1,43 @@
+body{
+    margin: 0 auto;
+    padding: 0;
+    color: black;
+    font-size: 16px;
+    display: flex;
+    font-family: 'Forum', cursive, 'Inter', 'Roboto', sans-serif;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+  }
+
+.memeContainer{
+    padding: 2rem;
+    
+}
+
+.slid-wrapper{
+    position: relative;
+    max-width: 48rem;
+    margin: 0 auto;
+}
+
+.memeSlider{
+    display: flex;
+    aspect-ratio: 16/9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    border-radius: 10px;
+}
+
+.memeSlider img{
+    flex: 1 0 100%;
+}
