@@ -7,6 +7,7 @@ body{
     font-family: 'Forum', cursive, 'Inter', 'Roboto', sans-serif;
     flex-direction: column;
     min-height: 100vh;
+    background-color: black;
 }
 
 html{
@@ -84,8 +85,8 @@ html{
     margin-top: 1.25rem;
 }
 
-.fakeBtn{
-    display: inline-block;
+#fakeBtn{
+    display: block;
     width: 1rem;
     height: 1rem;
     border-radius: 50%;
@@ -96,25 +97,14 @@ html{
     position: relative;
     opacity: 1;
     padding: 0;
+    position: relative;
 }
 
-.fakeBtn a{
-    display: inline-block;
-    width: 1rem;
-    height: 1rem;
-    border-radius: 50%;
-    z-index: 3;
-    padding: 0;
-    opacity: 0;
+#fakeBtn{
+    display: block;
 }
 
-.fakeBtn:hover{
-    background-color: white;
-    border: 1px solid blue;
-    padding: 0;
-}
-
-.fakeBtn::before{
+#fakeBtn::before{
     content: '';
     position: absolute;
     display: block;
@@ -126,12 +116,31 @@ html{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    display: none;
+    position: absolute;
+}
+
+.btnRadio:checked + #fakeBtn::before {
+    display: block;
+}
+
+#fakeBtn a{
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    position: static;
+    z-index: 3;
+    padding: 0;
     opacity: 0;
 }
 
-.label:checked + .fakeBtn::before{
-    opacity: 1;
+#fakeBtn:hover{
+    background-color: white;
+    padding: 0;
 }
+
+
 
 
 
